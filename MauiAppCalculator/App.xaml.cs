@@ -1,4 +1,5 @@
-﻿namespace MauiAppCalculator;
+﻿using MauiAppCalculator.MVVM.Views;
+namespace MauiAppCalculator;
 
 public partial class App : Application
 {
@@ -6,6 +7,8 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell();
+		//MainPage = new AppShell();
+
+		MainPage = new NavigationPage(new CalculatorView());
 	}
 }
